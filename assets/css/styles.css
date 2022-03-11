@@ -1,0 +1,797 @@
+/* Appel de la google font */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+/* Iniatialisation de la page */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: white;
+  background-color: transparent;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Design Header */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.content-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 125px;
+  border-bottom: 2px solid white;
+  z-index: 10;
+}
+.content-header.scrool-opcity {
+  border: none;
+  background-color: rgb(51, 5, 141, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.header-wrapper {
+  width: 94%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-wrapper figure {
+  margin: 0;
+}
+
+.logo-novei {
+  width: 420px;
+}
+
+.menu-burger {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.menu-burger::before{
+  content: " ";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+  transform:translateY(12px);
+}
+.menu-burger::after {
+  content: " ";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+  transform:translateY(-12px);
+}
+
+.menu-burger:hover {
+  width: 50px;
+  transition: all 0.3s ease;
+}
+
+/* ----------------------------------------------- */
+/* @media queries du header (responsive) */
+/* ----------------------------------------------- */
+@media (max-width: 800px) {
+  .logo-novei {
+    width: 350px;
+  }
+  .menu-burger {
+    width: 25px;
+  }
+  .menu-burger::before{
+    width: 40px;
+  }
+  .menu-burger::after {
+    width: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .logo-novei {
+    width: 280px;
+  }
+}
+
+/* Fin header */
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Content principal */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.site-content {
+  width: 100%;
+  height: 100vh;
+  margin-top: 200px;
+}
+
+/* image avec overlay par dessus */
+.img-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  mix-blend-mode: luminosity;
+}
+
+.first-page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(45deg, #33058d, #00a3e1);
+  opacity: 80%;
+}
+
+/* ----------------------------------------------- */
+/* First section info perso and layout of forms and other which will be the same along the page */
+/* ----------------------------------------------- */
+
+.wrapper-content {
+  position: relative;
+}
+
+.title-renseignement {
+  width: 500px;
+  white-space: nowrap;
+  margin-left: 30%;
+  color: white;
+  font-size: 2.188rem;
+  margin-top: 50px;
+  border-bottom: 2px solid white;
+  font-family: "Source Code Pro", monospace;
+}
+
+.wrapper-info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-input {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-title-first-section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.form-title {
+  width: 110px;
+  height: 110px;
+  background-color: #e10098;
+  transform: rotate(34deg);
+  position: relative;
+  left: 70px;
+}
+
+.title-first-info {
+  position: relative;
+  width: 300px;
+  white-space: nowrap;
+  border-bottom: 2px solid white;
+  top: 10px;
+}
+
+.item-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.content-form {
+  width: 80%;
+  height: 100%;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+.form {
+  width: 80%;
+  height: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  background-color: rgb(254, 254, 254, 0.2);
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.item-form {
+  width: 100%;
+  height: 37px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.item-form::placeholder {
+  color: white;
+  opacity: 0.75;
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+}
+
+/* ----------------------------------------------- */
+/* @media queries du first page and form (responsive) */
+/* ----------------------------------------------- */
+
+@media (max-width: 1300px) {
+  .title-renseignement {
+    width: 500px;
+    margin-left: 25%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .title-renseignement {
+    width: 500px;
+    margin-left: 25%;
+    font-size: 1.8rem;
+  }
+  .wrapper-info {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-info {
+    margin-left: 0px;
+  }
+  .wrapper-title-first-section {
+    width: 65%;
+  }
+  .form {
+    align-items: center;
+  }
+  .form-check {
+    width: 80%;
+    height: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .title-renseignement {
+    width: 500px;
+    margin-left: 25%;
+    font-size: 1.5rem;
+  }
+  .form-title {
+    width: 90px;
+    height: 90px;
+    background-color: #e10098;
+    transform: rotate(34deg);
+    position: relative;
+    left: 40px;
+  }
+  
+  .title-first-info {
+    position: relative;
+    width: 300px;
+    white-space: nowrap;
+    border-bottom: 2px solid white;
+    top: 10px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .title-renseignement {
+    width: 300px;
+    margin-left: 25%;
+    font-size: 1.2rem;
+  }
+  .title-first-info {
+    width: 60%;
+    white-space: normal;
+    border: none;
+  }
+  .form{
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .title-renseignement {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    margin-left: 0%;
+  }
+  .wrapper-title-first-section {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 80px;
+  }
+}
+
+/* ----------------------------------------------- */
+/* Seconde section Last class attended */
+/* ----------------------------------------------- */
+
+.btn-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+}
+
+input[type="radio"]{
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]:before{
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: white;
+  transition: 120ms transform ease-in-out;
+}
+input[type="radio"]:checked::before{
+  transform: scale(1);
+  transition: 120ms transform ease-in-out;
+}
+
+
+.value-radio {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+/* ----------------------------------------------- */
+/* Third section Diploma obtained */
+/* ----------------------------------------------- */
+
+.btn-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+}
+
+input[type="checkbox"]{
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]:before{
+  content: "";
+  position: absolute;
+  /* margin-bottom: 8px;
+  margin-left: 8px; */
+  width: 25px;
+  height: 25px;
+  transform: scale(0);
+  clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+  background-color: white;
+  transition: 120ms transform ease-in-out;
+}
+input[type="checkbox"]:checked::before{
+  transform: scale(1);
+  transition: 120ms transform ease-in-out;
+}
+
+.value-check {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+/* ----------------------------------------------- */
+/* Fourth section People to notify in case of emergency */
+/* ----------------------------------------------- */
+
+.numberPerson {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: relative;
+  left: -50px;
+  top: 30px;
+  margin-bottom: -30px;
+}
+
+.form-proche-1 {
+  margin-top: 30px;
+}
+
+.form-proche {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.wrapper-form-proche{
+  width: 100%;
+}
+
+.wrapper-item-plus{
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.item-cross{
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-cross{
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.icon-feather-plus{
+  width: 20px;
+}
+
+/* ----------------------------------------------- */
+/* @media queries Fourth section People to notify in case of emergency (responsive) */
+/* ----------------------------------------------- */
+
+@media (max-width: 1150px) {
+  .numberPerson {
+    left: 50px;
+  }
+}
+@media (max-width: 800px) {
+  .numberPerson {
+    left: -20px;
+    top: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .numberPerson {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* ----------------------------------------------- */
+/* Fifth section Other informations */
+/* ----------------------------------------------- */
+
+.form-other-thing{
+  width: 80%;
+  height: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.textarea {
+  width: 810px;
+  height: 310px;
+  border-radius: 10px;
+  background-color: rgb(254, 254, 254, 0.2);
+  border: 2px solid white;
+  padding: 20px;
+}
+.textarea::placeholder {
+  color: white;
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+}
+
+/* ----------------------------------------------- */
+/* Fifth section Other informations */
+/* ----------------------------------------------- */
+
+@media (max-width: 1300px) {
+  .textarea {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------------- */
+/* picture illustration */
+/* ----------------------------------------------- */
+
+.img-illust {
+  position: sticky;
+  top: 35%;
+  width: 700px;
+  height: 500px;
+  transform: rotate(7deg);
+}
+.img-illust.stop {
+  position: relative;
+  top: 87%;
+  width: 700px;
+  height: 500px;
+  transform: rotate(7deg);
+}
+
+/* ----------------------------------------------- */
+/* @media queries picture illustration (responsive)*/
+/* ----------------------------------------------- */
+
+@media (max-width: 1800px) {
+  .img-illust {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media (max-width: 1800px) {
+  .img-illust.stop {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .img-illust {
+    display: none;
+  }
+}
+@media (max-width: 1150px) {
+  .img-illust.stop {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------- */
+/* Sixth section Image rights */
+/* ----------------------------------------------- */
+
+.section-droit-image {
+  width: 90%;
+  height: auto;
+}
+
+.form-droit-image {
+  width: 90%;
+  height: auto;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.droit-image {
+  width: 100%;
+  height: 380px;
+  border-radius: 10px;
+  background-color: rgb(254, 254, 254, 0.2);
+  border: 2px solid white;
+  padding: 40px;
+  font-size: 20px;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  line-height: 2rem;
+}
+
+.text-1 {
+  display: flex;
+  align-items: center;
+}
+
+.input-droit-image {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px dashed white;
+  margin-top: -25px;
+  margin-left: 10px;
+}
+
+.form-contition{
+  width: 65%;
+  height: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+/* ----------------------------------------------- */
+/* seventh section for button mention  */
+/* ----------------------------------------------- */
+
+.btn-form{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.btn-form button{
+  font-size: 20px;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-form button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.3);
+	transition: all 0.3s;
+}
+
+.btn-form button:hover::before{
+  opacity: 0;
+  transform: scale(0.5,0.5);
+}
+
+.btn-form button::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+	transition: all 0.3s;
+  border: 3px solid rgba(255,255,255,0.7);
+  border-radius: 10px;
+	transform: scale(1.2,1.2);
+}
+.btn-form button:hover:after{
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+
+.form-mention{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------------------------------------- */
+/* @media queries Sixth section Image rights and seventh section for button mention (responsive)*/
+/* ----------------------------------------------- */
+
+@media (max-width: 1300px) {
+  .droit-image {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  .droit-image {
+    font-size: 15px;
+    line-height: 1rem;
+    width: 90%;
+    margin: auto;
+  }
+  .section-droit-image{
+    width: 100%;
+    margin: auto;
+  }
+  .form-droit-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .form-mention label{
+    font-size: 15px;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Footer */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.content-footer {
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 10px #33058d;
+}
+
+.logo-footer {
+  width: 350px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* End footer and End content principal */
+/* ------------------------------------------------------------------------------------------------------------------- */
